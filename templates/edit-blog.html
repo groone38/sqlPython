@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block sub_content %}
+<h1 class="text-center">Edit Blog Post</h1>
+<form method="post">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      value="{{ blog_form['title'] }}"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label">Body</label>
+    <textarea type="text" class="form-control ckeditor" id="body" name="body">
+{{ blog_form['body'] }}</textarea
+    >
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

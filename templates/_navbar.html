@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="vertical-align: middle">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Blogs</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" style="list-style-type: none">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        {% if session.login %}
+        <li class="nav-item">
+          <a class="nav-link" href="/write-blog">Write new post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/my-blogs">View my Posts</a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar-right" style="list-style-type: none">
+        {% if session.login %}
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/registr">Registr</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

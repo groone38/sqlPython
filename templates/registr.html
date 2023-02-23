@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block sub_content %}
+<div class="text-center">
+  <h1>User Registration</h1>
+</div>
+<form method="post">
+  <div class="mb-3">
+    <label for="firstname" class="form-label">First name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstname"
+      name="firstname"
+      placeholder="Enter your first name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="lastname" class="form-label">Last name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="lastname"
+      name="lastname"
+      placeholder="Enter your last name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      name="username"
+      placeholder="Enter your username"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" />
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Enter your password"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="confirmPassword" class="form-label">Confirm Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="confirmPassword"
+      name="confirmPassword"
+      placeholder="Confirm your password"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
